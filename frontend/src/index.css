@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+.titan-one-regular {
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Style swiper pagination dots with Tailwind */
+@layer components {
+  .swiper-pagination-bullet {
+    @apply bg-white/70 w-3 h-3 opacity-100;
+  }
+  .swiper-pagination-bullet-active {
+    /* Use a brand color - e.g., a nice gold */
+    @apply bg-[#c9a95f]; 
+  }
+}

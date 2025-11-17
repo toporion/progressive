@@ -5,7 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider } from 'react-router-dom';
 import router from './routes/Route';
-
+// Import Swiper's core (un-styled) structure
+import 'swiper/css';
+import 'swiper/css/effect-fade'; // for the fade effect
+import 'swiper/css/pagination';  // for the dots
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
