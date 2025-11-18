@@ -123,7 +123,7 @@ const DesignSpaces = () => {
                     <img 
                         src={over} 
                         alt="Interior Design Showcase"
-                        className="rounded-lg shadow-2xl w-full object-cover"
+                        className="rounded-lg rounded-br-3xl rounded-tl-3xl shadow-2xl w-full object-cover"
                     />
                 </motion.div>
             
