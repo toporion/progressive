@@ -13,36 +13,35 @@ const slideData = [
   {
     img: slide1,
     title: "Redefining Modern Spaces",
-    subtitle: "Experience comfort and style, perfectly blended."
+    subtitle: "Experience comfort and style, perfectly blended. Our designs focus on sustainability and timeless elegance, ensuring your space is both beautiful and functional."
   },
   {
     img: slide2,
-    title: "Elegant & Minimalist",
-    subtitle: "Simplicity is the ultimate sophistication."
+    title: "Elegant & Minimalist Design",
+    subtitle: "Simplicity is the ultimate sophistication. We strip away the unnecessary to highlight the purity of form and function in every piece."
   },
   {
     img: slide3,
-    title: "Luxury Kitchens",
-    subtitle: "Where culinary dreams meet design."
+    title: "Luxury Kitchens & Living",
+    subtitle: "Where culinary dreams meet design. Integrated appliances and custom cabinetry create a seamless, high-end experience for the modern home chef."
   },
   {
     img: slide4,
-    title: "Progressive Office Design",
-    subtitle: "Inspiring productivity, beautifully."
+    title: "Progressive Office Layouts",
+    subtitle: "Inspiring productivity, beautifully. Our workspaces promote collaboration and well-being with thoughtful lighting and ergonomic solutions."
   }
 ];
 
 const Banner = () => {
   return (
-    // Container is full-screen height
-    <div className="h-screen w-full"> 
+    <div className="h-screen w-full overflow-hidden"> 
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
-        effect="fade" // Elegant fade transition
-        pagination={{ clickable: true }} // The "app-like" dots
+        effect="fade"
+        pagination={{ clickable: true }}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         loop={true}
-        className="w-full h-full" // Swiper container takes full space
+        className="w-full h-full"
       >
         {slideData.map((slide, index) => (
           <SwiperSlide 
@@ -50,27 +49,40 @@ const Banner = () => {
             className="relative bg-cover bg-center"
             style={{ backgroundImage: `url(${slide.img})` }}
           >
-            {/* 1. Dark Overlay for contrast */}
+            {/* 1. Dark Overlay for general contrast */}
             <div className="absolute inset-0 bg-black/40 z-10"></div>
             
-            {/* 2. Slide Content */}
-            <div className="relative z-20 flex flex-col items-center justify-center h-full text-white text-center p-4">
-              <h1 
-                className="font-playfair text-4xl md:text-6xl font-bold text-shadow-md mb-4"
-              >
-                {slide.title}
-              </h1>
-              <p className="text-lg md:text-2xl font-light text-shadow-sm mb-8 max-w-2xl">
-                {slide.subtitle}
-              </p>
-              <button 
-                className="py-3 px-8 text-sm font-semibold uppercase tracking-wider 
-                           bg-transparent border-2 border-white text-white rounded-sm 
-                           transition-all duration-300 hover:bg-white hover:text-black"
-              >
-                View Our Portfolio
-              </button>
+            {/* 2. NEW: Subtle Gradient on the Right Edge */}
+            <div 
+                className="absolute inset-0 z-10"
+                style={{
+                    // Gradient from transparent on the left to black/10 (very subtle) on the right
+                    backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.2) 100%)'
+                }}
+            ></div>
+            
+            {/* 3. Left-aligned Slide Content (z-20 ensures it's on top) */}
+            <div className="relative z-20 flex flex-col justify-center h-full text-white p-6 md:p-16">
+              <div className="max-w-4xl text-left">
+                <h1 
+                  className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-4 uppercase leading-tight" 
+                  style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}
+                >
+                  {slide.title}
+                </h1>
+                <p className="text-lg md:text-xl font-light mb-10 max-w-xl">
+                  {slide.subtitle}
+                </p>
+                <button 
+                  className="py-3 px-10 text-sm font-bold uppercase tracking-widest 
+                             bg-white text-black border-2 border-white rounded-full 
+                             transition-all duration-300 hover:bg-transparent hover:text-white"
+                >
+                  View Our Portfolio
+                </button>
+              </div>
             </div>
+
           </SwiperSlide>
         ))}
       </Swiper>
