@@ -4,6 +4,9 @@ import ArtOfInterior from '../components/ArtOfInterior';
 import DesignSpaces from '../components/DesignSpaces';
 import WhyChoose from '../components/WhyChoose';
 import NewsEffect from '../components/NewsEffect';
+import HowWeWork from '../components/HowWeWork';
+import StatCounter from '../components/StatCounter';
+import WorkedBrand from '../components/WorkedBrand';
 
 const Home = () => {
     return (
@@ -13,6 +16,9 @@ const Home = () => {
             <DesignSpaces/>
             <WhyChoose/>
             <NewsEffect/>
+            <HowWeWork/>
+            <StatCounter/>
+            <WorkedBrand/>
         </div>
     );
 };

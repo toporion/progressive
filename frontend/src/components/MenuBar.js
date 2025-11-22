@@ -22,42 +22,33 @@ const navItems = [
         title: 'Residential', 
         href: '/residential',
         children: [
-            'Apartment', 'Kitchen', 'Small House', 'Villa Exterior', 'Flat', 'Indoor Swimming Pool Design', 
-            'Home Architecture Design', 'Home Repair', 'False Ceiling Design', 'Living Room', 'Library Unit', 
-            'Dressing Unit', 'Home Interior', 'Rooftop Garden Design', 'Villa Interior Design', 'Home Renovation', 
-            'Village House design', 'Kids Room Design', 'Duplex Building', 'Exterior', 'Drawing Room Design', 
-            'Dining Room Design', 'Master Bedroom', 'Bedroom'
+            'Apartment', 'Kitchen', 
         ]
     },
     { 
         title: 'Commercial', 
         href: '/commercial',
         children: [
-            'Office', 'Daycare Center', 'Hospital', 'Prayer Room', 'Salon Interior Design', 'Motorbike Showroom',
-            'Doctors Chamber', 'Mosque', 'Commercial Garden Care', 'Mega Kitchen', 'Live Bakery Setup', 'Medicine Shop',
-            'Bus Counter', 'Dental Clinic', 'ATM Booth', 'Diagnostics Center Design', 'Customer Care', 'Newsroom',
-            'Mini Zoo Design & Setup', 'Showroom', 'Shopping Center', 'Healthcare', 'Hospital Furniture',
-            'Prefabricated Steel Work', 'Automobile Showroom', 'Cafeteria Design', 'Clothing Store', 'Kids\' Indoor Playground',
-            'Corporate Office', 'Expert Painting', 'Plumbing & Sanitary', 'Digital Land Survey', 'School',
-            'Bank Interior Design', 'TV Studio', 'Podcast Studio'
+            'Office', 'Daycare Center', 'Hospital', 'Prayer Room',
         ]
     },
     { 
         title: 'Hospitality', 
         href: '/hospitality',
-        children: ['Hotel Design', 'Restaurant Interior', 'Cafe Layout', 'Resort Planning', 'Bar & Lounge', 'Spa & Wellness']
+        children: ['Hotel Design', 'Restaurant Interior',]
     },
     { 
         title: 'Architecture', 
         href: '/architecture',
-        children: ['Building Design', 'Landscape', '3D Modeling', 'Urban Planning', 'Sustainable Design', 'Feasibility Studies']
+        children: ['Building Design', ]
     },
-    { title: 'Portfolio', href: '/portfolio' },
+    
     { 
         title: 'Products', 
         href: '/products',
-        children: ['Furniture', 'Lighting', 'Textiles', 'Decor', 'Custom Pieces', 'Smart Home Tech']
+        children: ['Furniture', ]
     },
+    { title: 'Contact', href: '/contact' },
     { title: 'About us', href: '/about' },
 ];
 
@@ -216,7 +207,7 @@ const MenuBar = () => {
 
     return (
         <nav className={navClasses}>
-            <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="w-full max-w-screen-3xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
 
                     {/* Left Section: Logo (Unchanged) */}

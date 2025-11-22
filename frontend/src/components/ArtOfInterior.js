@@ -77,7 +77,7 @@ const ArtOfInterior = () => {
 
   return (
     // Main Section Container - NOW DARK
-    <div className="w-full bg-zinc-900 py-24 sm:py-32">
+    <div className="w-full bg-zinc-800 py-24 sm:py-32">
       
       {/* Content Wrapper */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8">

@@ -9,10 +9,22 @@ import router from './routes/Route';
 import 'swiper/css';
 import 'swiper/css/effect-fade'; // for the fade effect
 import 'swiper/css/pagination';  // for the dots
+
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import AuthProvider from './authProvider/AuthProvider';
+
+// Create a client
+const queryClient = new QueryClient()
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
+    </AuthProvider>
+
+
   </React.StrictMode>
 );
 
